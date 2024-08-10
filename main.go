@@ -3,14 +3,12 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	//"log"
 	"math/rand"
 	"net/http"
 	"strconv"
 
 	"github.com/gorilla/mux"
-	//"google.golang.org/api/indexing/v3"
-	//"google.golang.org/genproto/googleapis/cloud/aiplatform/v1beta1/schema/predict/params"
+	
 )
 
 type Movie struct{
