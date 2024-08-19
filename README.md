@@ -95,7 +95,3 @@ This is a simple RESTful API built with Go that manages a list of movies. The AP
 ## Dependencies
 
 - [Gorilla Mux](https://github.com/gorilla/mux) - A powerful URL router and dispatcher for Go.
-
-
-```
-
