@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"net/http"
 	"strconv"
+	"log"
 
 	"github.com/gorilla/mux"
 	
@@ -38,6 +39,7 @@ r.HandleFunc("/movies",createMovie).Methods("POST")
 
 fmt.Println("Starting server at port 8000/n")
 fmt.Println("server is started")
+log.Fatal(http.ListenAndServe(":8000",r))
 
 
 }
@@ -86,7 +88,7 @@ func createMovie(w http.ResponseWriter, r *http.Request){
 	_= json.NewDecoder(r.Body).Decode(&movie)
 	movie.ID = strconv.Itoa(rand.Intn(10000000))
 	movies = append(movies, movie)
-	json.NewDecoder(r.Body).Decode(movie)
+	json.NewDecoder(r.Body).Decode(&movie)
 
 }
 
